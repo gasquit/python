@@ -1,0 +1,15 @@
+function has following attributes:
+	__doc__ func_doc 	The function’s documentation string, or None if unavailable. 	Writable
+	__name__ func_name 	The function’s name. 	Writable
+	__module__ 	The name of the module the function was defined in, or None if unavailable. 	Writable
+	__defaults__ func_defaults 	A tuple containing default argument values for those arguments that have defaults, or None if no arguments have a default value. 	Writable
+	__code__ func_code 	The code object representing the compiled function body. 	Writable
+	__globals__ func_globals 	A reference to the dictionary that holds the function’s global variables — the global namespace of the module in which the function was defined. 	Read-only
+	__dict__ func_dict 	The namespace supporting arbitrary function attributes. 	Writable
+	__closure__ func_closure 	None or a tuple of cells that contain bindings for the function’s free variables. 	Read-only
+	
+	func_closure contains a tuple of environmental values captured by a function when it's generated.
+	func_code.co_varnames contains a tuple of var names, but this includes variable names inside a function as well.
+	func_defaults contains a tuple of default value of a function captured
+	
+To get the actual signature of a function, should use inspect.getargspec(f).args / .count
